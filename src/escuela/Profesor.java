@@ -36,4 +36,31 @@ public class Profesor {
 		this.especialidad = especialidad;
 	}
 
+	@Override
+	public String toString() {
+		return "Profesor [id=" + id + ", nombre=" + nombre + ", especialidad=" + especialidad + "]";
+	}
+
+	public void presentarse() {
+		System.out.println("Hola, soy el profesor " + nombre + ", mi especialidad es " + especialidad);
+	}
+
+	public void impartirClase(int suspensos) {
+		if (suspensos >= 10) {
+			System.out.println(
+					"El profesor " + nombre + " está impartiendo una clase de " + especialidad + "para los suspensos");
+		} else {
+			System.out.println("El profesor " + nombre
+					+ " no puede impartir clase de recuperacion. No hay suficientes suspensos.");
+		}
+	}
+
+	public void calificarExamen(int nota) {
+		if (nota >= 5) {
+			System.out.println("Muy bien, sigue así.");
+		} else {
+			System.out.println("Tienes que aplicarte más.");
+		}
+	}
+
 }
